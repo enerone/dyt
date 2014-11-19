@@ -1,7 +1,7 @@
 <?php 
 $I = new FunctionalTester($scenario);
 $I->am('a guest');
-$I->wantTo('sign up for a Larabook account');
+$I->wantTo('sign up for a Dyt account');
 
 $I->amOnPage('/');
 $I->click('Sign Up!');
@@ -16,7 +16,7 @@ $I->fillField('Password Confirmation:', 'demo');
 $I->click('Sign Up');
 
 $I->seeCurrentUrlEquals('');
-$I->see('Welcome to Larabook');
+$I->see('Welcome to Dyt');
 $I->seeRecord('users',[
 	'username' => 'JohnDoe'
 	]);

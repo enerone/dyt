@@ -1,8 +1,8 @@
 <?php
 
 use Faker\Factory as Faker;
-use Larabook\Statuses\Status;
-use Larabook\Users\User;
+use Dyt\Statuses\Status;
+use Dyt\Users\User;
 
 class StatusesTableSeeder extends Seeder {
     public function run(){

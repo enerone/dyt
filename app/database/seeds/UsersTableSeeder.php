@@ -1,7 +1,7 @@
 <?php
 
 use Faker\Factory as Faker;
-use Larabook\Users\User;
+use Dyt\Users\User;
 
 class UsersTableSeeder extends Seeder {
     public function run(){

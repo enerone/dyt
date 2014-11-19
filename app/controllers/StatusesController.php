@@ -2,9 +2,9 @@
 use Illuminate\Support\Facades\Auth;
 
 
-use Larabook\Forms\PublishStatusForm;
-use Larabook\Statuses\PublishStatusCommand;
-use Larabook\Statuses\StatusRepository;
+use Dyt\Forms\PublishStatusForm;
+use Dyt\Statuses\PublishStatusCommand;
+use Dyt\Statuses\StatusRepository;
 
 
 class StatusesController extends \BaseController {

@@ -1,5 +1,5 @@
 <?php
-use Larabook\Statuses\LeaveCommentOnStatusCommand;
+use Dyt\Statuses\LeaveCommentOnStatusCommand;
 use Laracasts\Commander\CommanderTrait;
 
 class CommentsController extends \BaseController {

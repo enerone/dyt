@@ -29,7 +29,7 @@ class FunctionalHelper extends \Codeception\Module {
         $I = $this->getModule('Laravel4');
         $I->fillField('body',$body);
         $I->click('Post Status');
-    	    //$this->have('Larabook\Statuses\Status', $overrides);
+    	    //$this->have('Dyt\Statuses\Status', $overrides);
 	}
 
 	public function have($model, $overrides = [])
@@ -38,7 +38,7 @@ class FunctionalHelper extends \Codeception\Module {
 	}
 
 	public function haveAnAccount($overrides = []) {
-		return $this->have('Larabook\Users\User', $overrides);
+		return $this->have('Dyt\Users\User', $overrides);
 		
 	}
 

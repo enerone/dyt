@@ -1,6 +1,6 @@
 <?php
 
-use Larabook\Forms\SignInForm;
+use Dyt\Forms\SignInForm;
 use Laracasts\Flash\Flash;
 
 class SessionsController extends \BaseController {

@@ -1,13 +1,13 @@
-Larabook\Users\User:
+Dyt\Users\User:
     username: $string$integer
     email: $string$integer@example.com
     password: $string
     created_at: $date
     updated_at: $date
 
-Larabook\Statuses\Status:
+Dyt\Statuses\Status:
     user_id:
-        type: Larabook\Users\User
+        type: Dyt\Users\User
     body: $text
     created_at: $date
     updated_at: $date

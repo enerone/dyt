@@ -1,6 +1,6 @@
 <?php
 
-use Larabook\Users\UserRepository;
+use Dyt\Users\UserRepository;
 
 class UsersController extends \BaseController {
 

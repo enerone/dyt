@@ -1,8 +1,8 @@
 <?php
 
 
-use Larabook\Forms\RegistrationForm;
-use Larabook\Registration\RegisterUserCommand;
+use Dyt\Forms\RegistrationForm;
+use Dyt\Registration\RegisterUserCommand;
 
 
 class RegistrationController extends BaseController {
@@ -20,7 +20,7 @@ class RegistrationController extends BaseController {
 
 		$this->registrationForm = $registrationForm;
 
-		$this->beforeFilter('guest');
+		//$this->beforeFilter('guest');
 	}
 
 	/**

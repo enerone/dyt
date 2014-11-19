@@ -13,7 +13,7 @@
 
 
 
-Event::listen('Larabook.Registration.Events.UserHasRegistered', function ($event) {
+Event::listen('Dyt.Registration.Events.UserHasRegistered', function ($event) {
 
 });
 
@@ -31,6 +31,8 @@ Route::post('register', [
 	'as' => 'register_path',
 	'uses' => 'RegistrationController@store'
 ]);
+
+
 
 /**
  * Sessions

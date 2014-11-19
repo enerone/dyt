@@ -54,7 +54,7 @@ return array(
 	|
 	*/
 
-	'from' => array('address' => 'jeffry@way.com', 'name' => 'Larabook admin'),
+	'from' => array('address' => 'jeffry@way.com', 'name' => 'Dyt admin'),
 
 	/*
 	|--------------------------------------------------------------------------

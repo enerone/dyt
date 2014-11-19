@@ -1,7 +1,7 @@
 <?php
 $I = new FunctionalTester($scenario);
-$I->am('a Larabook member');
-$I->wantTo('login to my Larabook account');
+$I->am('a Dyt member');
+$I->wantTo('login to my Dyt account');
 
 $I->signIn();
 

@@ -28,7 +28,7 @@ return array(
 	|
 	 */
 
-	'model' => 'Larabook\Users\User',
+	'model' => 'Dyt\Users\User',
 
 	/*
 	|--------------------------------------------------------------------------

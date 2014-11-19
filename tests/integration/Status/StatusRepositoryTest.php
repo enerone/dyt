@@ -1,7 +1,7 @@
 <?php
 
 
-use Larabook\Statuses\StatusRepository;
+use Dyt\Statuses\StatusRepository;
 use Laracasts\TestDummy\Factory as TestDummy;
 
 
@@ -24,14 +24,14 @@ class StatusRepositoryTest extends \Codeception\TestCase\Test
     public function it_gets_all_statuses_for_a_user()
     {
         // Given I have two users
-        $users = TestDummy::times(2)->create('Larabook\Users\User');
+        $users = TestDummy::times(2)->create('Dyt\Users\User');
 
         //And Statuses for both of them
-        TestDummy::times(2)->create('Larabook\Statuses\Status', [
+        TestDummy::times(2)->create('Dyt\Statuses\Status', [
             'user_id' => $users[0]->id
         ]);
 
-        TestDummy::times(2)->create('Larabook\Statuses\Status', [
+        TestDummy::times(2)->create('Dyt\Statuses\Status', [
             'user_id' => $users[1]->id
         ]);
 
@@ -48,11 +48,11 @@ class StatusRepositoryTest extends \Codeception\TestCase\Test
     // tests
    public function it_saves_a_status_for_a_user(){
        //given I have an unsaved status
-       $status = TestDummy::create('Larabook\Statuses\Status', [
+       $status = TestDummy::create('Dyt\Statuses\Status', [
            'user_id' => null
        ]);
        //And an existing user
-       $user = TestDummy::create('Larabook\Users\User');
+       $user = TestDummy::create('Dyt\Users\User');
        //When I try to persist this status
        $savedStatus = $this->repo->save($status, $user->id);
        //Then it should be saved

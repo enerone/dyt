@@ -1,8 +1,8 @@
 <?php 
 $I = new FunctionalTester($scenario);
 
-$I->am('a Larabook user');
-$I->wantTo('follow other Larabook users');
+$I->am('a Dyt user');
+$I->wantTo('follow other Dyt users');
 
 
 // setup

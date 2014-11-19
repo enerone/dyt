@@ -1,7 +1,7 @@
 <?php
 
-use Larabook\Users\FollowUserCommand;
-use Larabook\Users\UnfollowUserCommand;
+use Dyt\Users\FollowUserCommand;
+use Dyt\Users\UnfollowUserCommand;
 
 class FollowsController extends \BaseController {
 
