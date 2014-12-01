@@ -28,9 +28,10 @@
         <ul class="nav navbar-nav">
             @if($currentUser)
             <li class="dropdown">
-                <a href="sedes_path" class="dropdown-toggle" data-toggle="dropdown">Usuarios<span class="caret"></span></a>
+                <a href="sedes_path" class="dropdown-toggle" data-toggle="dropdown">Sedes<span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
-                    <li>{{ link_to_route('register_path', 'Nueva sede') }}</li>
+                    <li>{{ link_to_route('sedesshow_path', 'Listado de Sedes') }}</li>
+                    <li>{{ link_to_route('createsedes_path', 'Nueva sede') }}</li>
                 </ul>
 
 

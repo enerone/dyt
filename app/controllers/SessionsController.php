@@ -1,5 +1,6 @@
 <?php
 
+
 use Dyt\Forms\SignInForm;
 use Laracasts\Flash\Flash;
 
@@ -10,6 +11,8 @@ class SessionsController extends \BaseController {
 	function __construct(SignInForm $signInForm) {
 		$this->signInForm = $signInForm;
 		$this->beforeFilter('guest', ['except'=>'destroy']);
+
+
 		
 	}
 	/**
@@ -29,6 +32,7 @@ class SessionsController extends \BaseController {
 	public function store() {
 		
 		$formData = Input::only('email', 'password');
+
 		$this->signInForm->validate($formData);
 
 		if(!Auth::attempt($formData)){

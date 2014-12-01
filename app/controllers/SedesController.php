@@ -1,15 +1,34 @@
 <?php
 
-class DiegoController extends \BaseController {
+use Dyt\Forms\SedeForm;
+use Dyt\Sedes\RegisterSedeCommand;
+use Dyt\Sedes\Sede;
 
-	/**
+/**
+ * @property mixed sedeRepository
+ */
+class SedesController extends \BaseController {
+
+
+    private $sedeForm;
+
+    function __construct(SedeForm $sedeForm) {
+
+        $this->sedeForm = $sedeForm;
+
+
+    }
+
+    /**
 	 * Display a listing of the resource.
 	 *
 	 * @return Response
 	 */
 	public function index()
 	{
-		//
+        $sedes =  Sede::orderBy('nombre_sede','asc')->paginate(25);
+
+        return View::make('sedes.index')->withSedes($sedes);
 	}
 
 
@@ -20,7 +39,7 @@ class DiegoController extends \BaseController {
 	 */
 	public function create()
 	{
-		//
+        return View::make('sedes.create');
 	}
 
 
@@ -31,7 +50,16 @@ class DiegoController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+        $this->sedeForm->validate(Input::all());
+
+
+        $sede = $this->execute(RegisterSedeCommand::class);
+        /*
+
+
+                Flash::message('Glad to have you as a larabook member');
+
+                return Redirect::home(); */
 	}
 
 

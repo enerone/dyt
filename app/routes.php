@@ -98,3 +98,26 @@ Route::delete('follow/{id}', [
 ]);
 //Password reset
 Route::controller('password','RemindersController');
+
+/**
+ * Sedes
+ */
+Route::get('sedes',[
+    'as' => 'sedes_path',
+    'uses' => 'SedesController@create'
+]);
+
+Route::get('sedesshow',[
+    'as' => 'sedesshow_path',
+    'uses' => 'SedesController@index'
+]);
+
+Route::get('sedescrea', [
+    'as' => 'createsedes_path',
+    'uses' => 'SedesController@create'
+]);
+
+Route::post('sedescrea', [
+    'as' => 'createsedes_path',
+    'uses' => 'SedesController@store'
+]);

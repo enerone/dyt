@@ -1,4 +1,4 @@
-<?php namespace Dyt\Users;
+<?php namespace Dyt\Sedes;
 
 use Illuminate\Auth\Reminders\RemindableInterface;
 use Illuminate\Auth\Reminders\RemindableTrait;
@@ -9,19 +9,19 @@ use Dyt\Registration\Events\UserRegistered;
 use Laracasts\Commander\Events\EventGenerator;
 use Laracasts\Presenter\PresentableTrait;
 
-class User extends Eloquent implements UserInterface, RemindableInterface {
+class Sede extends Eloquent implements  RemindableInterface {
 
-    use UserTrait, RemindableTrait, EventGenerator, PresentableTrait, FollowableTrait;
+    use UserTrait, RemindableTrait, EventGenerator, PresentableTrait;
     //use EventGenerator;
 
-    protected $fillable = ['username', 'email', 'password', 'nivel_usuario'];
+    protected $fillable = ['nombre_sede', 'localidad', 'provincia', 'responsable_sede', 'email_responsable_sede','telefono_responsable_sede'];
 
     /**
      * The database table used by the model.
      *
      * @var string
      */
-    protected $table = 'users';
+    protected $table = 'sedes';
 
     /**
      * Path to presenter for a user
